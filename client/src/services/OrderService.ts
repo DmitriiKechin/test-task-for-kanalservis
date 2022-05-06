@@ -5,10 +5,10 @@ import { IOrder } from '../models/IOrder';
 
 export const orderAPI = createApi({
   reducerPath: 'orderAPI',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5500' }),
   endpoints: build => ({
+    //запрос для получения (отсортированного) массива данных
     fetchOrders: build.query<
-      //запрос для получения (отсортированного) массива данных
       IOrder[],
       {
         limit: number; //количество элементов в ответе
@@ -25,7 +25,7 @@ export const orderAPI = createApi({
         nameFilter = '',
         typeFilter = '',
       }) => ({
-        url: `/orders`,
+        url: `/api/orders`,
         params: {
           limit,
           page,
