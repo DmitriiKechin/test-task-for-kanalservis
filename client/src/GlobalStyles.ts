@@ -13,5 +13,12 @@ html, body, #root{
 
 body{
 font-size:18px;
-font-family: 'Roboto', sans-serif;}
+font-family: 'Roboto', sans-serif;
+}
+
+button{
+	border: none;
+	font:inherit ;
+}
+
 `;
