@@ -1,0 +1,36 @@
+{
+  "name": "kanalservis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsc && npm install --prefix client",
+    "start": "cross-env NODE_ENV=production node server/build/app.js",
+    "server": "cross-env NODE_ENV=development nodemon --exec ts-node ./server/src/app.ts",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitriiKechin/test-task-for-kanalservis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitriiKechin/test-task-for-kanalservis/issues"
+  },
+  "homepage": "https://github.com/DmitriiKechin/test-task-for-kanalservis#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.31",
+    "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
