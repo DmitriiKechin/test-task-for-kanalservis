@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Wrapper } from './styles';
 import { Input } from '../input/Input';
 import { Select } from '../select/select';
 import { IOptionsNameFilter, IOptionsTypeFilter } from '../select/types';
-import { useAppDispatch, useAppSelector } from '../hooks/redux';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { filterSlice } from '../../store/reducers/FilterSlice';
+import { useDebounce } from '../../hooks/useDebounce';
 
 // значения для options селектора для выбора параметра фильтрации
 const optionsNameFilter: IOptionsNameFilter[] = [
@@ -26,6 +27,8 @@ const optionsTypeFilter: IOptionsTypeFilter[] = [
 export const Filter: React.FC = () => {
   const dispatch = useAppDispatch();
   const { valueFilter } = useAppSelector(store => store.filterReducer);
+  const [valueInput, setValueInput] = useState(valueFilter);
+  const debouncedValueInput = useDebounce(valueInput, 700); //debounce декоратор на воод значений в input
 
   //обработчик выбора значения параметра фитрации
   const changeHandlerNameSelect = (
@@ -51,8 +54,12 @@ export const Filter: React.FC = () => {
 
   //обработчик для input
   const changeHandlerInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(filterSlice.actions.setValueFilter(event.target.value));
+    setValueInput(event.target.value);
   };
+
+  useEffect(() => {
+    dispatch(filterSlice.actions.setValueFilter(debouncedValueInput));
+  }, [debouncedValueInput, dispatch]);
 
   return (
     <Wrapper>
@@ -67,7 +74,7 @@ export const Filter: React.FC = () => {
         options={optionsTypeFilter}
         onChange={changeHandlerTypeSelect}
       />
-      <Input value={valueFilter} onChange={changeHandlerInput} />
+      <Input value={valueInput} onChange={changeHandlerInput} />
     </Wrapper>
   );
 };
