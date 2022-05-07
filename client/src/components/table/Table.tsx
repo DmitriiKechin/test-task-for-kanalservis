@@ -5,7 +5,12 @@ import { TableHeader } from './tableHeader/TableHeader';
 import { TableRow } from './tableRow/TableRow';
 import { ITable } from './types';
 
-export const Table: React.FC<ITable> = ({ columns, columnWidths, orders }) => {
+export const Table: React.FC<ITable> = ({
+  columns,
+  columnWidths,
+  maxPage,
+  orders,
+}) => {
   return (
     <Wrapper>
       <TableHeader columnWidths={columnWidths} columns={columns} />
@@ -17,7 +22,7 @@ export const Table: React.FC<ITable> = ({ columns, columnWidths, orders }) => {
             columns={[order.date, order.name, order.amount, order.distance]}
           />
         ))}
-      <TableFooter />
+      <TableFooter maxPage={maxPage || 0} />
     </Wrapper>
   );
 };

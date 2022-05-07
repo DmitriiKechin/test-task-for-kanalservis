@@ -6,4 +6,5 @@ export interface ITable {
   columns: Columns;
   columnWidths: Columns;
   orders: IOrder[] | undefined;
+  maxPage: number | undefined;
 }
