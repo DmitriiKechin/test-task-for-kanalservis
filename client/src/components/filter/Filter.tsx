@@ -26,7 +26,7 @@ const optionsTypeFilter: IOptionsTypeFilter[] = [
 
 export const Filter: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { valueFilter } = useAppSelector(store => store.filterReducer);
+  const { valueFilter } = useAppSelector(state => state.filterReducer);
   const [valueInput, setValueInput] = useState(valueFilter);
   const debouncedValueInput = useDebounce(valueInput, 700); //debounce декоратор на воод значений в input
 
@@ -34,6 +34,7 @@ export const Filter: React.FC = () => {
   const changeHandlerNameSelect = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
+    dispatch(filterSlice.actions.setPage(0)); // устанавливаем активной первую страницу
     dispatch(
       filterSlice.actions.setNameFilter(
         optionsNameFilter[event.currentTarget.options.selectedIndex].name
@@ -45,6 +46,7 @@ export const Filter: React.FC = () => {
   const changeHandlerTypeSelect = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
+    dispatch(filterSlice.actions.setPage(0));
     dispatch(
       filterSlice.actions.setTypeFilter(
         optionsTypeFilter[event.currentTarget.options.selectedIndex].name
@@ -54,6 +56,7 @@ export const Filter: React.FC = () => {
 
   //обработчик для input
   const changeHandlerInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(filterSlice.actions.setPage(0));
     setValueInput(event.target.value);
   };
 
@@ -70,7 +73,7 @@ export const Filter: React.FC = () => {
       />
       <Select
         isTextCenter
-        width="15%"
+        width="20%"
         options={optionsTypeFilter}
         onChange={changeHandlerTypeSelect}
       />
