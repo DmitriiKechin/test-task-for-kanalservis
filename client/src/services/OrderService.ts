@@ -1,23 +1,13 @@
 //RTK_QUERY
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { NameFilter, TypeFilter } from '../components/select/types';
-import { IOrder } from '../models/IOrder';
+import { IFetchOrders, IQueryParametrsFetchOrders } from './types';
 
 export const orderAPI = createApi({
   reducerPath: 'orderAPI',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5500' }),
   endpoints: build => ({
     //запрос для получения (отсортированного) массива данных
-    fetchOrders: build.query<
-      IOrder[],
-      {
-        limit: number; //количество элементов в ответе
-        page: number; // номер страницы отображения
-        valueFilter?: string; // значение для фильтрации
-        typeFilter?: TypeFilter; // тип фильтрации (больше,меньше и т.д )
-        nameFilter?: NameFilter; // параметр для фильтрации
-      }
-    >({
+    fetchOrders: build.query<IFetchOrders, IQueryParametrsFetchOrders>({
       query: ({
         limit,
         page,
