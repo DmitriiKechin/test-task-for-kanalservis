@@ -21,6 +21,11 @@ export const Wrapper = styled.button<{ isActive?: boolean }>`
     outline: 1px solid ${props => props.theme.colors.BottomGradient};
   }
 
+  &:disabled {
+    background: ${props => props.theme.colors.Primary};
+    outline: 1px solid ${props => props.theme.colors.Secondary};
+  }
+
   ${props =>
     props.isActive &&
     css`
