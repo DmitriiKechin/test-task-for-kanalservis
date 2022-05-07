@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "tsc && npm install --prefix client",
+    "postinstall": "tsc && npm install --prefix client && npm run client:build",
     "start": "cross-env NODE_ENV=production node server/build/app.js",
     "server": "cross-env NODE_ENV=development nodemon --exec ts-node ./server/src/app.ts",
     "client": "npm run start --prefix client",
+    "client:build": "npm run build --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
