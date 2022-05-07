@@ -3,70 +3,210 @@
     "id": 1,
     "date": "11.05.2019",
     "name": "Труба",
-    "amount": "3",
-    "distance": "300m"
+    "amount": 3,
+    "distance": 300
   },
   {
     "id": 2,
     "date": "11.06.2020",
     "name": " Квадрадная труба",
-    "amount": "5",
-    "distance": "350m"
+    "amount": 5,
+    "distance": 350
   },
   {
     "id": 3,
     "date": "11.07.2021",
     "name": "Переходник",
-    "amount": "7",
-    "distance": "200m"
+    "amount": 7,
+    "distance": 200
   },
   {
     "id": 4,
     "date": "11.08.2022",
     "name": "Провод",
-    "amount": "13",
-    "distance": "220m"
+    "amount": 13,
+    "distance": 220
   },
   {
     "id": 5,
     "date": "11.09.2018",
     "name": "Утеплитель",
-    "amount": "23",
-    "distance": "170m"
+    "amount": 23,
+    "distance": 170
   },
   {
     "id": 6,
     "date": "11.10.2019",
     "name": "Кабель",
-    "amount": "45",
-    "distance": "410m"
+    "amount": 45,
+    "distance": 410
   },
   {
     "id": 7,
     "date": "11.11.2020",
     "name": "Гофра",
-    "amount": "32",
-    "distance": "450m"
+    "amount": 32,
+    "distance": 450
   },
   {
     "id": 8,
     "date": "11.12.2021",
     "name": "Канализационная труба",
-    "amount": "18",
-    "distance": "270m"
+    "amount": 18,
+    "distance": 270
   },
   {
     "id": 9,
     "date": "11.01.2018",
     "name": "Самогреющий кабель",
-    "amount": "45",
-    "distance": "235m"
+    "amount": 45,
+    "distance": 235
   },
   {
     "id": 10,
     "date": "11.02.2019",
     "name": "Арматура",
-    "amount": "9",
-    "distance": "300m"
+    "amount": 9,
+    "distance": 300
+  },
+  {
+    "id": 11,
+    "date": "11.07.2019",
+    "name": "Труба",
+    "amount": 5,
+    "distance": 780
+  },
+  {
+    "id": 12,
+    "date": "11.02.2019",
+    "name": " Квадрадная труба",
+    "amount": 55,
+    "distance": 1350
+  },
+  {
+    "id": 13,
+    "date": "21.01.2020",
+    "name": "Переходник",
+    "amount": 7,
+    "distance": 210
+  },
+  {
+    "id": 14,
+    "date": "21.09.2022",
+    "name": "Провод",
+    "amount": 17,
+    "distance": 320
+  },
+  {
+    "id": 15,
+    "date": "01.12.2019",
+    "name": "Утеплитель",
+    "amount": 3,
+    "distance": 70
+  },
+  {
+    "id": 16,
+    "date": "9.11.2017",
+    "name": "Кабель",
+    "amount": 55,
+    "distance": 210
+  },
+  {
+    "id": 17,
+    "date": "30.11.2021",
+    "name": "Гофра",
+    "amount": 52,
+    "distance": 770
+  },
+  {
+    "id": 18,
+    "date": "29.02.2021",
+    "name": "Канализационная труба",
+    "amount": 20,
+    "distance": 320
+  },
+  {
+    "id": 19,
+    "date": "17.03.2017",
+    "name": "Самогреющий кабель",
+    "amount": 25,
+    "distance": 378
+  },
+  {
+    "id": 20,
+    "date": "29.04.2019",
+    "name": "Арматура",
+    "amount": 19,
+    "distance": 790
+  },
+  {
+    "id": 21,
+    "date": "01.05.2029",
+    "name": "Труба",
+    "amount": 19,
+    "distance": 320
+  },
+  {
+    "id": 22,
+    "date": "30.06.2019",
+    "name": " Квадрадная труба",
+    "amount": 57,
+    "distance": 950
+  },
+  {
+    "id": 23,
+    "date": "28.07.2021",
+    "name": "Переходник",
+    "amount": 77,
+    "distance": 923
+  },
+  {
+    "id": 24,
+    "date": "27.02.2022",
+    "name": "Провод",
+    "amount": 23,
+    "distance": 126
+  },
+  {
+    "id": 25,
+    "date": "20.09.2017",
+    "name": "Утеплитель",
+    "amount": 25,
+    "distance": 190
+  },
+  {
+    "id": 26,
+    "date": "07.11.2019",
+    "name": "Кабель",
+    "amount": 25,
+    "distance": 110
+  },
+  {
+    "id": 27,
+    "date": "22.11.2016",
+    "name": "Гофра",
+    "amount": 32,
+    "distance": 550
+  },
+  {
+    "id": 28,
+    "date": "17.01.2021",
+    "name": "Канализационная труба",
+    "amount": 48,
+    "distance": 570
+  },
+  {
+    "id": 29,
+    "date": "31.01.2019",
+    "name": "Самогреющий кабель",
+    "amount": 47,
+    "distance": 235
+  },
+  {
+    "id": 30,
+    "date": "05.06.2018",
+    "name": "Арматура",
+    "amount": 19,
+    "distance": 670
   }
 ]
