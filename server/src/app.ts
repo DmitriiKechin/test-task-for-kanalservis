@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import corsMiddleware from './middleware/cors.middleware';
+import { IOrder } from './models/Order';
 import ordersRouter from './routes/orders.router';
 
 const app = express();
@@ -22,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-function start(): Promise<void> {
+function start(): IOrder[] {
   try {
     app.listen(PORT, () =>
       console.log(`App has been started on port --> ${PORT}...`)
